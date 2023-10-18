@@ -4,7 +4,7 @@ import { BsSearch } from 'react-icons/bs';
 
 const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLocation, setUserLocation, setData, data, searchLocation }) => {
   const fetchWeatherData = async (latitude, longitude) => {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${
       import.meta.env.VITE_API_KEY
     }&q=${latitude},${longitude}&days=7&aqi=no&alerts=no&lang=en`;
     const response = await fetch(url);
