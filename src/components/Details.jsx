@@ -52,16 +52,16 @@ const Details = ({ dayData, data, show, setShow }) => {
               </div>
               <div className={`${show ? 'flex' : 'hidden'} flex-col gap-5 text-lg`}>
                 <p className='col-start-2'>
-                  Humidité: <span className=' font-bold text-xl'>{data?.current.humidity}</span>
+                  Humidité: <span className=' font-bold text-xl'>{data?.current?.humidity}</span>
                 </p>
                 <p className='col-start-2'>
-                  Temp. Max: <span className=' font-bold text-xl'>{data?.current.temp_c}</span>
+                  Temp. Max: <span className=' font-bold text-xl'>{data?.current?.temp_c}</span>
                 </p>
                 <p className='col-start-2'>
-                  Temp. Ressenti: <span className=' font-bold text-xl'>{data?.current.feelslike_c}</span>
+                  Temp. Ressenti: <span className=' font-bold text-xl'>{data?.current?.feelslike_c}</span>
                 </p>
                 <p className='col-start-2'>
-                  UV: <span className=' font-bold text-xl'>{data?.current.uv}</span>
+                  UV: <span className=' font-bold text-xl'>{data?.current?.uv}</span>
                 </p>
               </div>
             </div>
