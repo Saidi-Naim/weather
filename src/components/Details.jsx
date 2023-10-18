@@ -12,25 +12,25 @@ const Details = ({ dayData, data, show, setShow }) => {
           <div className=' flex justify-center items-center text-white w-full'>
             <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
               <img src={dayData?.day?.condition.icon} alt='logo weather' className='w-[150px] self-center mt-20' />
-              <h1 className='text-8xl col-start-1 '>{Math.round(dayData?.day.avgtemp_c)}&deg;c</h1>
+              <h1 className='text-8xl col-start-1 '>{Math.round(dayData?.day?.avgtemp_c)}&deg;c</h1>
               <h2 className='text-xl font-bold text-center col-start-1'>
-                {data?.location.name}, {data?.location.country}
+                {data?.location?.name}, {data?.location?.country}
               </h2>
               <p className='col-start-1'>{data?.current?.condition.text}</p>
               <button onClick={handleShow}>More Details</button>
             </div>
             <div className={`${show ? 'flex' : 'hidden'} flex-col gap-5 text-lg`}>
               <p className='col-start-2'>
-                Humidité: <span className=' font-bold text-xl'>{dayData?.day.avghumidity}</span>
+                Humidité: <span className=' font-bold text-xl'>{dayData?.day?.avghumidity}</span>
               </p>
               <p className='col-start-2'>
-                Temp. Max: <span className=' font-bold text-xl'>{dayData?.day.maxtemp_c}</span>
+                Temp. Max: <span className=' font-bold text-xl'>{dayData?.day?.maxtemp_c}</span>
               </p>
               <p className='col-start-2'>
-                Temp. Min: <span className=' font-bold text-xl'>{dayData?.day.mintemp_c}</span>
+                Temp. Min: <span className=' font-bold text-xl'>{dayData?.day?.mintemp_c}</span>
               </p>
               <p className='col-start-2'>
-                UV: <span className=' font-bold text-xl'>{dayData?.day.uv}</span>
+                UV: <span className=' font-bold text-xl'>{dayData?.day?.uv}</span>
               </p>
             </div>
           </div>
@@ -41,9 +41,9 @@ const Details = ({ dayData, data, show, setShow }) => {
             <div className=' flex justify-center items-center text-white w-full'>
               <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
                 <img src={data?.current?.condition.icon} alt='logo weather' className='w-[150px] self-center' />
-                <h1 className='text-8xl col-start-1 '>{Math.round(data?.current.temp_c)}&deg;c</h1>
+                <h1 className='text-8xl col-start-1 '>{Math.round(data?.current?.temp_c)}&deg;c</h1>
                 <h2 className='text-xl font-bold text-center col-start-1'>
-                  {data?.location.name}, {data?.location.country}
+                  {data?.location?.name}, {data?.location?.country}
                 </h2>
                 <p className='col-start-1'>{data?.current?.condition.text}</p>
                 <button className='w-[40%] font-bold hover:scale-110 transition-all duration-75' onClick={handleShow}>
