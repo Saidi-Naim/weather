@@ -11,12 +11,12 @@ const Details = ({ dayData, data, show, setShow }) => {
         <div className='flex col-start-1 mt-20'>
           <div className=' flex justify-center items-center text-white w-full'>
             <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
-              <img src={dayData?.day.condition.icon} alt='logo weather' className='w-[150px] self-center mt-20' />
+              <img src={dayData?.day?.condition.icon} alt='logo weather' className='w-[150px] self-center mt-20' />
               <h1 className='text-8xl col-start-1 '>{Math.round(dayData?.day.avgtemp_c)}&deg;c</h1>
               <h2 className='text-xl font-bold text-center col-start-1'>
                 {data?.location.name}, {data?.location.country}
               </h2>
-              <p className='col-start-1'>{data?.current.condition.text}</p>
+              <p className='col-start-1'>{data?.current?.condition.text}</p>
               <button onClick={handleShow}>More Details</button>
             </div>
             <div className={`${show ? 'flex' : 'hidden'} flex-col gap-5 text-lg`}>
@@ -40,12 +40,12 @@ const Details = ({ dayData, data, show, setShow }) => {
           <div className='flex col-start-1 mt-20'>
             <div className=' flex justify-center items-center text-white w-full'>
               <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
-                <img src={data?.current.condition.icon} alt='logo weather' className='w-[150px] self-center' />
+                <img src={data?.current?.condition.icon} alt='logo weather' className='w-[150px] self-center' />
                 <h1 className='text-8xl col-start-1 '>{Math.round(data?.current.temp_c)}&deg;c</h1>
                 <h2 className='text-xl font-bold text-center col-start-1'>
                   {data?.location.name}, {data?.location.country}
                 </h2>
-                <p className='col-start-1'>{data?.current.condition.text}</p>
+                <p className='col-start-1'>{data?.current?.condition.text}</p>
                 <button className='w-[40%] font-bold hover:scale-110 transition-all duration-75' onClick={handleShow}>
                   More Details
                 </button>
