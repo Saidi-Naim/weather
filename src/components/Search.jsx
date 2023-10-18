@@ -21,7 +21,6 @@ const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLoca
           longitude: position.coords.longitude,
         });
 
-        // Appel à la fonction de récupération des données météorologiques avec les nouvelles coordonnées
         fetchWeatherData(position.coords.latitude, position.coords.longitude);
       });
     } else {
@@ -31,7 +30,6 @@ const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLoca
 
   useEffect(() => {
     if (userLocation.latitude && userLocation.longitude) {
-      // Appel initial pour récupérer les données météorologiques lorsque les coordonnées de l'utilisateur sont déjà définies
       fetchWeatherData(userLocation.latitude, userLocation.longitude);
     }
   }, [userLocation]);

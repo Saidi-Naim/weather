@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
-import { BiCurrentLocation, BsSearch } from 'react-icons/all';
 import Search from './components/Search';
 import Forecast from './components/Forecast';
 import Details from './components/Details';
@@ -38,7 +37,7 @@ function App() {
   return (
     <div className={`app w-full grid grid-cols-1 `}>
       <Search
-        location={location}
+        location={location || ''}
         setErrorMessage={setErrorMessage}
         errorMessage={errorMessage}
         setLocation={setLocation}

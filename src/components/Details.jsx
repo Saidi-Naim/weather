@@ -10,8 +10,8 @@ const Details = ({ dayData, data, show, setShow }) => {
       {dayData ? (
         <div className='flex col-start-1 mt-20'>
           <div className=' flex justify-center items-center text-white w-full'>
-            <div className='card flex flex-col justify-center items-center gap-4 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
-              <img src={dayData?.day.condition.icon} alt='logo weather' className='w-[150px] self-center' />
+            <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
+              <img src={dayData?.day.condition.icon} alt='logo weather' className='w-[150px] self-center mt-20' />
               <h1 className='text-8xl col-start-1 '>{Math.round(dayData?.day.avgtemp_c)}&deg;c</h1>
               <h2 className='text-xl font-bold text-center col-start-1'>
                 {data?.location.name}, {data?.location.country}
@@ -39,7 +39,7 @@ const Details = ({ dayData, data, show, setShow }) => {
         Object.keys(data).length !== 0 && (
           <div className='flex col-start-1 mt-20'>
             <div className=' flex justify-center items-center text-white w-full'>
-              <div className='card flex flex-col justify-center items-center gap-4 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
+              <div className='card flex flex-col justify-center items-center gap-2 col-start-1 rounded-lg text-white w-[400px] h-[350px]  mt-[-8px] mb-[35px]'>
                 <img src={data?.current.condition.icon} alt='logo weather' className='w-[150px] self-center' />
                 <h1 className='text-8xl col-start-1 '>{Math.round(data?.current.temp_c)}&deg;c</h1>
                 <h2 className='text-xl font-bold text-center col-start-1'>
