@@ -17,21 +17,17 @@ function App() {
   });
 
   const searchLocation = async (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${location}&days=6&aqi=no&alerts=no&lang=en`;
 
-      const url = `https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${location}&days=6&aqi=no&alerts=no&lang=en`;
+    //   setLoading(true);
+    try {
+      const response = await axios.get(url);
 
-      //   setLoading(true);
-      try {
-        const response = await axios.get(url);
-
-        setData(response?.data);
-      } catch (error) {
-        console.log(error);
-      }
-      //   setLoading(false);
+      setData(response?.data);
+    } catch (error) {
+      console.log(error);
     }
+    //   setLoading(false);
   };
 
   return (

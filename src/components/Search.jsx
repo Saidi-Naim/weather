@@ -56,7 +56,7 @@ const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLoca
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 e.preventDefault();
-                searchLocation(e);
+                searchLocation();
               }
             }}
           />
@@ -65,7 +65,7 @@ const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLoca
           </button>
         </div>
 
-        <button type='submit' className='ml-4 px-3 py-1 bg-[#ff9800] text-white rounded-[200px]' onClick={fetchWeatherData}>
+        <button type='button' className='ml-4 px-3 py-1 bg-[#ff9800] text-white rounded-[200px]' onClick={() => searchLocation(location)}>
           <BsSearch className='text-2xl ' />
         </button>
       </form>
