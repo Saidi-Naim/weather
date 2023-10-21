@@ -35,7 +35,7 @@ const Search = ({ location, errorMessage, setErrorMessage, setLocation, userLoca
   }, [userLocation]);
 
   return (
-    <div className='fixed col-start-1 top-0 flex flex-col mt-5 md:mt-5 formContainer w-full justify-center '>
+    <div className='fixed col-start-1 top-0 flex flex-col mt-5 md:mt-5 formContainer w-full justify-center z-10'>
       <form className='flex justify-center'>
         <div className='relative flex'>
           <input
